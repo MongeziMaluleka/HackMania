@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoCycle Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>EcoCycle Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="https://t3.ftcdn.net/jpg/08/24/65/06/360_F_824650685_eUJ8uzyev6jIczBxcC4Y8HYC8b4PY2uP.jpg" alt="E-cycling">
+    <div class="hero-text">Responsible E-Waste Recycling Made Easy</div>
+  </div>
+
+  <!-- Information Section -->
+  <div class="info-section" id="about">
+    <h2>Why Recycle with Us?</h2>
+    <p>EcoCycle Hub makes electronic waste recycling simple and environmentally responsible. We ensure your e-waste is properly recycled or refurbished for reuse, keeping harmful materials out of landfills.</p>
+    <p>Choose between dropping off your items at our convenient hub locations or schedule a pickup right at your doorstep!</p>
+  </div>
+
+  <!-- Services Section -->
+  <div class="info-section" id="services">
+    <h2>Our Recycling Hubs</h2>
+    <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3460.5555555555557!2d30.0444444444444!3d-29.8583333333333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDUxJzMwLjAiUyAzMMKwMDInNDAuMCJF!5e0!3m2!1sen!2sza!4v1234567890123"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+    <p>Select a hub near you:</p>
+    <div class="hubs">
+      <div class="hub-item" data-hub="north-hub">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipNdX0ug2rkiQogpKTj4hPy6e8PNTE8_2y96cveG=w408-h272-k-no" alt="North Hub">
+        <p>Isphepho Group (Umlazi): 3 km, 5 stars.
+
+        </p>
+      </div>
+      <div class="hub-item" data-hub="central-hub">
+        <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=iwf1hPGZkvF5hUF8d6EDjw&cb_client=search.gws-prod.gps&w=408&h=240&yaw=122.30519&pitch=0&thumbfov=100" alt="Central Hub">
+        <p>Tekweni Recycling (Mobeni): 9.1 km, 3.5 stars.
+        </p>
+      </div>
+      <div class="hub-item" data-hub="south-hub">
+        <img src="https://www.electronic-cemetery.com/uploads/2/7/3/4/2734001/published/clear-background.png?1664979285" alt="South Hub">
+        <p>Electronic Cemetery (Hillcrest): 26.9 km, 4.9 stars.
+        </p>
+      </div>
+    </div>
+
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-item">
+        <img src="https://www.electronic-cemetery.com/uploads/2/7/3/4/2734001/published/picture1.png?1664978574" alt="Drop-off">
+        <h3>Drop-off Service</h3>
+        <p>Bring your e-waste to our hub during business hours.</p>
+        <button class="btn disabled" id="drop-off">Schedule Drop-off</button>
+      </div>
+      <div class="service-item">
+        <img src="https://www.electronic-cemetery.com/uploads/2/7/3/4/2734001/published/picture4.png?1664978611" alt="Pickup">
+        <h3>Pickup Service</h3>
+        <p>We'll collect your e-waste from your location.</p>
+        <button class="btn disabled" id="pickup">Schedule Pickup</button>
+      </div>
+      <div class="service-item">
+        <img src="https://www.electronic-cemetery.com/uploads/2/7/3/4/2734001/published/picture2.png?1664978583" alt="Bulk">
+        <h3>Bulk Collection</h3>
+        <p>Special service for businesses and large quantities.</p>
+        <button class="btn disabled" id="bulk">Request Quote</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="bookingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Schedule Your Service</h2>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Preferred Date:</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="items">Items to Recycle:</label>
+          <textarea id="items" required></textarea>
+        </div>
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+  <!-- Contact Section -->
+<div class="info-section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <div class="contact-info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>123 Eco Street, Green City, 4001</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-phone"></i>
+            <p>+27 (0) 31 123 4567</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-envelope"></i>
+            <p>info@ecocyclehub.com</p>
+          </div>
+          <div class="contact-info-item">
+            <i class="fas fa-clock"></i>
+            <p>Mon-Fri: 8:00 AM - 6:00 PM<br>Sat: 9:00 AM - 2:00 PM</p>
+          </div>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Send us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Full Name</label>
+              <input type="text" id="contactName" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" id="contactEmail" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 EcoCycle Hub. Making e-waste recycling accessible to all.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
